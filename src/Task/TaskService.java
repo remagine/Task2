@@ -35,7 +35,7 @@ public class TaskService {
         }
     }
 
-    public Task getMinTask() {
+    private Task getMinTask() {
         TreeSet<Task> taskSet = taskRepository.getTaskSet();
         if (taskSet.size() == 0) {
             return new Task(1);
