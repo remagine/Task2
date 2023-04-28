@@ -1,7 +1,6 @@
 package Task;
 
 import java.util.Objects;
-import java.util.StringJoiner;
 
 public class Task implements Comparable {
     private final int tag;
@@ -13,7 +12,7 @@ public class Task implements Comparable {
         this.tag = tag;
     }
 
-    public Task createNextMinTask() {
+    public Task next() {
         return new Task(this.tag + 1);
     }
 

@@ -45,9 +45,9 @@ public class TaskService {
             return new Task(1);
         }
 
-        Task nextTask = minTask.createNextMinTask();
+        Task nextTask = minTask.next();
         while (taskSet.contains(nextTask)) {
-            nextTask = nextTask.createNextMinTask();
+            nextTask = nextTask.next();
         }
 
         return nextTask;
