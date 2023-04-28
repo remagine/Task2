@@ -60,7 +60,7 @@ public class TaskService {
         Comparator<Map.Entry<Integer, Integer>> valueComparator = Comparator.comparingInt(Map.Entry::getValue);
         entryList.sort(valueComparator.reversed());
 
-        System.out.println("사용가능한 TAG:" + validTags.toString());
+        System.out.println("사용가능한 TAG:" + validTags);
         System.out.println("TASK 생성 실패:" + taskRepository.getCreateFailCount());
         System.out.println("TASK 수행 실패한 태그:" + entryList);
     }
